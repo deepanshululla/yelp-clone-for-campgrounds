@@ -1,13 +1,21 @@
 
 ## Restful routes for campground
 | name      |    url                    |    verb   |        desc.                                |
-=================================================================================================
+
+|---------- |:-------------------------:|----------:|--------------------------------------------:|
+
 | INDEX     |   /campgrounds            |    GET    |         Display list of campgrounds         |
+
 | NEW       |   /campgrounds/new        |    GET    |      Display form to create a new campground|
+
 | CREATE    |   /campgrounds            |    POST   |       Add new campground to DB              |
+
 | SHOW      |   /campgrounds/:id        |    GET    |       Shows info about 1 campground.        |
+
 | EDIT      |   /campgrounds/:id/edit   |    GET    |       Shows edit page for 1 campground.     |
+
 | UPDATE    |   /campgrounds/:id        |    PUT    |       updates info about 1 campground.      |
+
 | DELETE    |   /campgrounds/:id        |    DELETE |      delete info about 1 campground.        |
 
 ## Restful routes for comments
