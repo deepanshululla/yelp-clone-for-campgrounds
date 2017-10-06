@@ -1,0 +1,25 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/navbar.ejs %>
+<div class="container">
+    <% include ../partials/jumbotron %>
+    
+    <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+        <% campgrounds.forEach(function(campground){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src= "<%= campground["image"] %>" >
+                </div>
+                <div class="caption">
+                    <h4> <%= campground["name"] %> </h4>
+                </div>
+                <p>
+                    <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary"> More info</a>
+                </p>
+            </div>
+        <% }); %>
+        
+    </div>
+</div>
+
+
+<% include ../partials/footer.ejs %>

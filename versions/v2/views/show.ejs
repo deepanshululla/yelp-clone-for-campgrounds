@@ -1,0 +1,22 @@
+<% include partials/header %>
+<% include partials/navbar %>
+<div class="container">
+    <div class="row flex">
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail img-responsive">
+                <img src= "<%= campground["image"] %>" >
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            
+            <h3><%= campground["name"] %></h3>
+            <p><%= campground["description"] %></p>
+            
+        </div>
+    </div>
+    
+    
+    
+</div>
+
+<% include partials/footer %>
