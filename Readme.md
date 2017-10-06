@@ -1,41 +1,33 @@
 
 ## Restful routes for campground
 | name      |    url                    |    verb   |        desc.                                |
-
 |---------- |:-------------------------:|----------:|--------------------------------------------:|
-
 | INDEX     |   /campgrounds            |    GET    |         Display list of campgrounds         |
-
 | NEW       |   /campgrounds/new        |    GET    |      Display form to create a new campground|
-
 | CREATE    |   /campgrounds            |    POST   |       Add new campground to DB              |
-
 | SHOW      |   /campgrounds/:id        |    GET    |       Shows info about 1 campground.        |
-
 | EDIT      |   /campgrounds/:id/edit   |    GET    |       Shows edit page for 1 campground.     |
-
 | UPDATE    |   /campgrounds/:id        |    PUT    |       updates info about 1 campground.      |
-
 | DELETE    |   /campgrounds/:id        |    DELETE |      delete info about 1 campground.        |
 
 ## Restful routes for comments
-name    url                                         verb                desc.
-===============================================================================
-NEW     /campgrounds/:id/comments/new               GET         display form for comment. Nested route.
-CREATE  /campgrounds/:id/comments                   POST        Add new comment for campground.
-EDIT    /campgrounds/:id/comments/:comment_id/edit  GET         Shows edit page for 1 comment.
-UPDATE  /campgrounds/:id/comments/:comment_id       PUT         updates info about 1 campground.
-DELETE  /campgrounds/:id/comments/:comment_id       DELETE      updates info about 1 campground.
+| name      |      url                                  |     verb  |                desc.                          |
+|---------- |:-----------------------------------------:|----------:|----------------------------------------------:|
+| NEW       | /campgrounds/:id/comments/new             |   GET     |     display form for comment. Nested route.   | 
+| CREATE    | /campgrounds/:id/comments                 |   POST    |     Add new comment for campground.           | 
+| EDIT      | /campgrounds/:id/comments/:comment_id/edit|   GET     |    Shows edit page for 1 comment.             | 
+| UPDATE    | /campgrounds/:id/comments/:comment_id     |   PUT     |     updates info about 1 campground.          | 
+| DELETE    | /campgrounds/:id/comments/:comment_id     |   DELETE  |     updates info about 1 campground.          | 
 
 
 ## Auth Routes
-name            url                     verb                desc.
-===============================================================================
-REGISTER        /register               GET             display form for signup.
-REGISTER        /register               POST            Add new user
-LOGIN           /login                  GET             display form for signin.
-LOGIN           /login                  POST            Authenticate existing user
-LOGOUT          /logout                 GET             Logging out.
+| name      |    url                    |    verb   |        desc.                                |
+|---------- |:-------------------------:|----------:|--------------------------------------------:|
+| REGISTER  |       /register           |     GET   |           display form for signup.          | 
+| REGISTER  |       /register           |     POST  |           Add new user                      | 
+| LOGIN     |       /login              |     GET   |           display form for signin.          | 
+| LOGIN     |       /login              |     POST  |           Authenticate existing user.       | 
+| LOGOUT    |       /logout             |     GET   |           Logging out.                      | 
 
 
 ## Version History
@@ -98,7 +90,7 @@ LOGOUT          /logout                 GET             Logging out.
 ###v15
 * Making photos safe so that users can only give image urls from unsplash.
 * Creating Admin user and giving user priviledges.
-* 
+* Creating user  profiles.
 
 
 
