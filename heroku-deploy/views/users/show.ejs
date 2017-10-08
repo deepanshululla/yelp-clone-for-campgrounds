@@ -1,0 +1,96 @@
+<% include ../partials/header %>
+<% include ../partials/navbar %>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="img img-rounded thumbnail">
+                 <img src="<%= user.avatar %>" class="profileImages" alt="user profile image">
+                 <div class="caption centered">
+                     <a href="mailto:<%=user.email%>">Mail <%=user.fullname.charAt(0).toUpperCase()+user.fullname.slice(1)%> </a>
+                 </div>
+            </div>
+            
+        </div>
+        <div class="col-md-8">
+            <h1 style="text-align: center">User profile</h1>
+            <div style="margin: 3% auto;">
+                <form class="form-horizontal" action="/register" method="POST">
+                    <div class="form-group">
+                        <label for="fullname" class="control-label col-sm-2"> Full Name:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="fullname" name="fullname" readonly value="<%= user.fullname.charAt(0).toUpperCase()+user.fullname.slice(1) %>">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email:</label>
+                        <div class="col-sm-10">
+                          <input type="email" class="form-control" id="email" name="email" readonly value="<%= user.email %>">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="username" class="control-label col-sm-2">Username:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="username" name="username" readonly value="<%= user.username %>">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="avatar" class="control-label col-sm-2"> URL for Avatar:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="avatar" name="avatar" value="<%= user.avatar %>" readonly>
+                        </div>
+                    </div>
+                  
+                    
+                    <!--<div class="form-group"> -->
+                    <!--    <div class="col-sm-offset-2 col-sm-10">-->
+                    <!--        <button type="submit" class="btn btn-primary btn-lg btn-block">Sign up</button>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                </form>
+            </div>
+        </div>
+      
+       
+    </div>
+    <hr class="style-seven">
+</div>
+
+<div class="container">
+    <h2 align="center"> <%= user.fullname.charAt(0).toUpperCase()+user.fullname.slice(1) %>'s Campgrounds</h2>
+    <div class="row">
+        <% campgrounds.forEach(function(campground){ %>
+        <ul id="userCampgrounds">
+            <li>
+                <div>
+                    <div class="col-md-4">
+                        <div class="img img-rounded thumbnail">
+                             <img src="<%= campground.image %>" class="campgroundImages" alt="CampgroundImages">
+                             <div class="caption centered">
+                                 <a href="/campgrounds/<%=campground.id%>"> <%=campground.name%></a>
+                             </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-8">
+                        <h4><a href="/campgrounds/<%=campground.id%>"> <%=campground.name%></a></h4>
+                        <p>
+                            <%=campground.description%>
+                        </p>
+                            
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+        <hr class="style-two">
+         <% }); %>
+         
+    </div>
+</div>
+
+
+<% include ../partials/footer %>

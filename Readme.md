@@ -21,13 +21,16 @@
 
 
 ## Auth Routes
-| name      |    url                    |    verb   |        desc.                                |
-|---------- |:-------------------------:|----------:|--------------------------------------------:|
-| REGISTER  |       /register           |     GET   |           display form for signup.          | 
-| REGISTER  |       /register           |     POST  |           Add new user                      | 
-| LOGIN     |       /login              |     GET   |           display form for signin.          | 
-| LOGIN     |       /login              |     POST  |           Authenticate existing user.       | 
-| LOGOUT    |       /logout             |     GET   |           Logging out.                      | 
+| name          |    url                    |    verb   |        desc.                                |
+|----------     |:-------------------------:|----------:|--------------------------------------------:|
+| REGISTER      |       /register           |     GET   |           display form for signup.          | 
+| REGISTER      |       /register           |     POST  |           Add new user                      | 
+| LOGIN         |       /login              |     GET   |           display form for signin.          | 
+| LOGIN         |       /login              |     POST  |           Authenticate existing user.       | 
+| LOGOUT        |       /logout             |     GET   |           Logging out.                      | 
+| User-profile  |       /users/:id          |     GET   |           Display user profile              |
+| Forget Pass   |       /forgot             |     GET   |           Display forget password form      |
+
 
 
 ## Version History
@@ -87,10 +90,15 @@
 * Adding google maps support for campground locations using geocoder.js
 
 
-###v15
+### v15
 * Making photos safe so that users can only give image urls from unsplash.
 * Creating Admin user and giving user priviledges.
-* Creating user  profiles.
+* Creating user profiles(Also page for displaying user information).
+* Fuzzy search through Campgroungs using Ajax.
+* Made Search form safe from regex DDOS attack using "safe" escaped regex.
+https://stackoverflow.com/questions/38421664/fuzzy-searching-with-mongodb
+* Added password reset feature thorugh emails.(Uses async,crypto(included in node) and Nodemailer)
+(Not working as per expectations because of google email security)
 
 
 
