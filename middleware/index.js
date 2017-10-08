@@ -1,6 +1,5 @@
 var Campground      = require("../models/campground"),
-    Comment         = require("../models/comment"),
-    User            = require("../models/user");
+    Comment         = require("../models/comment");
 
 var middlewareObj={}
 

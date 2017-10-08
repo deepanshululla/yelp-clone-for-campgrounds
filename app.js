@@ -29,7 +29,9 @@ app.use(methodOverride("_method"));
 app.use(flash());
 
 //conect to db
-mongoose.connect("mongodb://localhost/yelp_camp_v3",{useMongoClient: true});
+// mongoose.connect("mongodb://localhost/yelp_camp_v3",{useMongoClient: true});
+// mongodb://root:password@ds115045.mlab.com:15045/yelpcamp_deepanshu
+mongoose.connect("mongodb://root:password@ds115045.mlab.com:15045/yelpcamp_deepanshu");
 mongoose.connection.on('open', function(){
    console.log('Mongoose connected'); 
 });

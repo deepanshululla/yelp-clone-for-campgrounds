@@ -30,7 +30,9 @@
 | LOGOUT        |       /logout             |     GET   |           Logging out.                      | 
 | User-profile  |       /users/:id          |     GET   |           Display user profile              |
 | Forget Pass   |       /forgot             |     GET   |           Display forget password form      |
-
+| Forget Pass   |       /forgot             |     POST  |           Send password form                |
+| Reset Pass    |       /reset             |     GET   |           Display reset password form        |
+| Reset Pass    |       /forgot             |     POST  |           Send reset form                   |
 
 
 ## Version History
