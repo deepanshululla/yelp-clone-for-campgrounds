@@ -32,7 +32,10 @@ app.use(flash());
 // mongoose.connect("mongodb://localhost/yelp_camp_v3",{useMongoClient: true});
 // mongodb://root:password@ds115045.mlab.com:15045/yelpcamp_deepanshu
 // mongoose.connect("mongodb://root:password@ds115045.mlab.com:15045/yelpcamp_deepanshu");
-mongoose.connect(process.env.DBURL,{useMongoClient: true});
+var db_url=process.env.DATABASEURL||"mongodb://localhost/yelp_camp_v3";
+mongoose.connect(db_url);
+mongoose.connect(db_url,{useMongoClient: true});
+
 mongoose.connection.on('open', function(){
    console.log('Mongoose connected'); 
 });
@@ -42,7 +45,7 @@ mongoose.connection.on('open', function(){
 
 // Passport configuration
 app.use(expressSession({
-    secret:"Some random string",
+    secret: process.env.secretpassword||'password',
     resave: false,
     saveUninitialized: false
 }));
