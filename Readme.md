@@ -1,8 +1,13 @@
-Application deployed at
+### Application deployed at
 
 https://evening-basin-24316.herokuapp.com
-Created a large restful social media application with user registration,login and logout using passport js where users can share campgrounds and comments on them. Implemented dynamic pricing for campgrounds and proper authentication and authorization by appropriate middleware.Added functionality to search through campgrounds and for resetting password. Used mongodb for backend database as well as bootsrap for styling.
 
+### About the project
+* Created a large restful social media application with user registration,login and logout using passport js where users can have complete CRUD abilities of campgrounds posts and comments created by them.
+
+* Implemented dynamic pricing for campgrounds and proper authentication and authorization by appropriate middleware.Added functionality to search through campgrounds and for resetting password. 
+
+* Used mongodb for backend database as well as bootstrap for styling. Added support for viewing campgrounds location using google maps.
 
 ## Restful routes for campground
 | name      |    url                    |    verb   |        desc.                                |
