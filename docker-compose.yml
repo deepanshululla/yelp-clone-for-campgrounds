@@ -12,14 +12,24 @@ services:
                 - db
             depends_on:
                 - db
-            restart: always
+                
             environment:
-                - DBURL="mongodb://localhost:27017/app"
+                DBURL: "mongodb://db:27017/app"
+                
         db:
             image: mongo
             restart: always
+            hostname: db
             ports:
                 - "27017:27017"
+            volumes:
+                - ./db:/opt/db
+                - /data:/data/db
+            command: bash -c "cp /opt/db/mongod.conf /etc/mongod.conf.orig && /usr/bin/mongod"
+            environment:
+                MONGO_INITDB_ROOT_USERNAME: root
+                MONGO_INITDB_ROOT_PASSWORD: password
+                MONGO_INITDB_DATABASE: app
             
                 
             

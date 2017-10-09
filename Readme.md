@@ -2,6 +2,11 @@
 
 https://evening-basin-24316.herokuapp.com
 
+### Docker image
+https://hub.docker.com/r/deepanshululla/yelpcamp_nodejs_mongodb/
+
+docker pull deepanshululla/yelpcamp_nodejs_mongodb
+
 ### About the project
 * Created a large restful social media application with user registration,login and logout using passport js where users can have complete CRUD abilities of campgrounds posts and comments created by them.
 

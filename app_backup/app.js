@@ -32,7 +32,7 @@ app.use(flash());
 // mongoose.connect("mongodb://localhost/yelp_camp_v3",{useMongoClient: true});
 // mongodb://root:password@ds115045.mlab.com:15045/yelpcamp_deepanshu
 // mongoose.connect("mongodb://root:password@ds115045.mlab.com:15045/yelpcamp_deepanshu");
-var db_url=process.env.DBURL||"mongodb://localhost/yelp_camp_v3";
+var db_url=process.env.DBURL;
 mongoose.connect(db_url);
 mongoose.connect(db_url,{useMongoClient: true});
 
