@@ -1,0 +1,25 @@
+version: '2'
+services:
+        web:
+            build: app/.
+            ports:
+                - "3000:3000"
+            hostname: web
+            restart: always
+            volumes:
+                - ./appvolume:/app
+            links:
+                - db
+            depends_on:
+                - db
+            restart: always
+            environment:
+                - DBURL="mongodb://localhost:27017/app"
+        db:
+            image: mongo
+            restart: always
+            ports:
+                - "27017:27017"
+            
+                
+            

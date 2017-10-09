@@ -1,0 +1,21 @@
+.footer {
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    background: #e7e7e7;
+ 
+}
+
+.thumbnail img {
+    width:100%;
+}
+.thumbnail  {
+    padding:0;
+}
+.thumbnail .caption-full {
+    padding: 9px;
+}
+.delete-form {
+    display: inline;
+}

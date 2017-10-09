@@ -1,0 +1,11 @@
+.footer {
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    background: #e7e7e7;
+ 
+}
+.section-headings {
+    text-decoration: underline;
+}
